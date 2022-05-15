@@ -28,7 +28,7 @@ export const Prompt = () => {
             <SubContainer>
                 <Title>enter prompt: </Title>
                 <PromptField>
-                    <Input onChange={(e)=>setPrompt(e.target.value)}></Input>
+                    <Input value = {prompt} onChange={(e)=>setPrompt(e.target.value)}></Input>
                     <Button onClick= {onSubmit}>submit</Button>
                 </PromptField>
             </SubContainer>

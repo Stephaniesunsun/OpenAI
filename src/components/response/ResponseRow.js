@@ -30,7 +30,7 @@ export const ResponseRow = ({entry}) => {
 };
 
 const Container = styled('div')`
-    width: 280px;
+    width: 300px;
     height: 420px;
     border: 1px solid black;
     margin: 20px 0px 0px 70px;

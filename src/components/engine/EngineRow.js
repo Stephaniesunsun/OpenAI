@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import { configColor } from '../../utils/colorConfig';
 import { useDispatch, useSelector } from 'react-redux'
 import { setEngine } from '../../redux/reducer';
 
@@ -38,9 +37,6 @@ const Engine = styled('div')`
     text-align: center;
     padding: 5px;
     font-size: 14px;
-    &:hover{
-        border: 3px solid ${configColor.black};
-        border-radius: 10px;
 }
 `
 
