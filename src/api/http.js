@@ -8,6 +8,7 @@ export const axiosApi = axios.create({
     headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${apiKEY}`,
+        "max_tokens":1000,
     }
 })
 

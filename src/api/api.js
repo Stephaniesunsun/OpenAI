@@ -1,8 +1,8 @@
 import { axiosApi, axiosEngineApi} from './http';
 
-function getResponseAction(values){
+function getResponseAction(engine, values){
     return {
-        url: `/engines/text-curie-001/completions`,
+        url: `/engines/${engine}/completions`,
         data: values,
         method: 'post'
     }
@@ -15,8 +15,8 @@ function getEngineAction(){
     }
 }
 
-export async function getResponse(values){
-    const {data} = await axiosApi(getResponseAction(values));
+export async function getResponse(engine, values){
+    const {data} = await axiosApi(getResponseAction(engine, values));
     return data;
 }
 
