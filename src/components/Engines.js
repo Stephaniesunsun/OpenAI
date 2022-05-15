@@ -3,6 +3,7 @@ import { EngineRow } from './engine/EngineRow';
 import styled from '@emotion/styled';
 import { Container, Title, Loading, mediaQuery } from '../style';
 import { getEngine } from '../api/api';
+import { configColor } from '../utils/colorConfig';
 
 export const Engines = () => {
     const [engines, setEngines] = useState([]);
@@ -49,6 +50,8 @@ const MapContainer = styled('div')`
     display:grid;
     grid-template-columns: repeat(8, 1fr);
     gap:20px;
+    border: 2px solid ${configColor.pink};
+    border-radius: 5px;
 
     @media ${mediaQuery.laptop}{
         grid-template-columns: repeat(6, 1fr);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { useDispatch, useSelector } from 'react-redux'
 import { setEngine } from '../../redux/reducer';
+import { configColor } from '../../utils/colorConfig';
 
 export const EngineRow = ({engine}) => {
     const [selected, setSelected] = useState('');
@@ -37,6 +38,9 @@ const Engine = styled('div')`
     text-align: center;
     padding: 5px;
     font-size: 14px;
+    &:hover{
+        border:2px solid ${configColor.pink};
+    }
 }
 `
 

@@ -21,7 +21,7 @@ export const ResponseRow = ({entry}) => {
                     {!entry.answer?
                         <p>no response to this prompt</p>
                         :
-                        <p>{entry.answer}</p>
+                        <AnswerContainer>{entry.answer}</AnswerContainer>
                     }
                 </Answer>
             </Lower>
@@ -30,13 +30,19 @@ export const ResponseRow = ({entry}) => {
 };
 
 const Container = styled('div')`
-    width: 300px;
-    height: 420px;
+    width: 320px;
+    height: 450px;
     border: 1px solid black;
     margin: 20px 0px 0px 70px;
     border: 2px solid ${configColor.black};
     border-radius: 10px;
-    overflow: hidden;
+    overflow: scroll;
+`
+
+const AnswerContainer = styled('div')`
+    padding: 5px;
+    height: 100%;
+    width: 100%;
 `
 
 const Title = styled('p')`
@@ -54,7 +60,7 @@ const Upper = styled('div')`
     padding: 10px 0px 0px 10px;
     border-raduis: 10px;
     background-color: ${configColor.black};
-    height:49%;
+    height:45%;
     color: ${configColor.white};
     display: flex;
     flex-direction: column;
@@ -62,8 +68,8 @@ const Upper = styled('div')`
 const Lower = styled('div')`
     padding: 10px 0px 0px 10px;
     border-raduis: 10px;
+    height:100%;
     background-color: ${configColor.pink};
-    height:49%;
     color: ${configColor.black};
     display: flex;
     flex-direction: column;

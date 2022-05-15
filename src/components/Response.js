@@ -32,7 +32,7 @@ const Title = styled('p')`
 const MapContainer = styled('div')`
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-
+    margin-left: 40px;
     @media ${mediaQuery.laptop}{
         grid-template-columns: repeat(2, 1fr);
     }

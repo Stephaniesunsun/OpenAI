@@ -1,6 +1,8 @@
 import { Prompt } from './components/Prompt';
 import { Engines } from './components/Engines';
 import styled from '@emotion/styled';
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   return (
@@ -8,6 +10,9 @@ function App() {
       <Title>fun with AI</Title>
       <Engines />
       <Prompt />
+      <ToastContainer 
+        autoClose={2000}
+      />
     </Container>
   );
 }

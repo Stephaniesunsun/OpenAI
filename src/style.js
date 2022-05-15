@@ -34,6 +34,6 @@ export const Loading = styled('p')`
 `
 
 export const mediaQuery = {
-  laptop: 'screen and (max-width: 1238px)',
+  laptop: 'screen and (max-width: 1354px)',
   tablet: 'screen and (max-width: 826px)',
 }
